@@ -9,6 +9,21 @@ package com.javaoo.store;
  */
 public class Book extends Item {
 	/**
+	 * @param title
+	 * @param price
+	 * @param quantity
+	 * @param author
+	 * @param publisher
+	 * @param category
+	 */
+	public Book(String title, double price, int quantity, String author, String publisher, String category) {
+		super(title, price, quantity);
+		this.setAuthor(author);
+		this.setPublisher(publisher);
+		this.setCategory(category);
+	}
+
+	/**
 	 * @return the author
 	 */
 	public String getAuthor() {

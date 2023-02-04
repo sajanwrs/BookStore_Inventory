@@ -25,20 +25,6 @@ public class ClassicalCD extends Item {
 	}
 
 	/**
-	 * @return the perfomers
-	 */
-	public String[] getPerfomers() {
-		return perfomers;
-	}
-
-	/**
-	 * @param perfomers the perfomers to set
-	 */
-	public void setPerfomers(String[] perfomers) {
-		this.perfomers = perfomers;
-	}
-
-	/**
 	 * @return the recordingLocation
 	 */
 	public String getRecordingLocation() {
@@ -67,8 +53,38 @@ public class ClassicalCD extends Item {
 	}
 
 	private String composer;
-	private String[] perfomers = new String[5];
+	private String[] performers = new String[5];
 	private String recordingLocation;
-	private Date releaseDate = new Date();
+	private Date releaseDate;
+	
+	/*
+	 * method for adding new performer
+	 */
+	private int performerCount = 0;
+	
+	public void addPerformer(String performer) {
+			if(performerCount >= performers.length) {
+				System.out.println("Error!! There is no room for new performer.");
+			}
+			else
+			{
+				performers[performerCount] = performer;
+				performerCount++;
+			}
+
+		}
+	
+	/*
+	 * method to Display performers
+	 */
+	public void showPerformers() {
+		if(performerCount ==0)
+			System.out.println("No performers have been added for this CD.");
+		for(int i=0; i < performerCount; i++) {
+			System.out.println("Performer is " + performers[i]);
+		}
+	}
+	
+	
 
 }

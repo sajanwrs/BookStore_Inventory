@@ -10,6 +10,25 @@ package com.javaoo.store;
 public class Item {
 
 	/**
+	 * 
+	 */
+	public Item() {
+		super();
+	}
+
+	/**
+	 * @param title
+	 * @param price
+	 * @param quantity
+	 */
+	public Item(String title, double price, int quantity) {
+		super();
+		this.setTitle(title);
+		this.setPrice(price);
+		this.setQuantity(quantity);
+	}
+
+	/**
 	 * @return the title
 	 */
 	public String getTitle() {

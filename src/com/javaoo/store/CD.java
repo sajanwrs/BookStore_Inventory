@@ -11,6 +11,19 @@ import java.util.Date;
  */
 public class CD extends Item {
 	/**
+	 * @param title
+	 * @param price
+	 * @param quantity
+	 * @param artist
+	 * @param releaseDate
+	 */
+	public CD(String title, double price, int quantity, Artist artist, Date releaseDate) {
+		super(title, price, quantity);
+		this.setArtist(artist);
+		this.setReleaseDate(releaseDate);
+	}
+
+	/**
 	 * @return the artist
 	 */
 	public Artist getArtist() {
@@ -38,7 +51,7 @@ public class CD extends Item {
 		this.releaseDate = releaseDate;
 	}
 
-	private Artist artist = new Artist();
-	private Date releaseDate = new Date();
+	private Artist artist;
+	private Date releaseDate;
 
 }
