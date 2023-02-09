@@ -9,6 +9,7 @@ import com.javaoo.store.Artist;
 import com.javaoo.store.Book;
 import com.javaoo.store.CD;
 import com.javaoo.store.ClassicalCD;
+import com.javaoo.store.Inventory;
 import com.javaoo.store.Item;
 
 /**
@@ -38,6 +39,7 @@ public class InventoryDriver {
 		String [] performers1 = {"Henry", "Elizabeth", "Franz", "Arther"};
 		myInventory[8] = new ClassicalCD("Romeo and Juliet", 22.95, 1, "Joe Green", performers1, "New York", new Date("01/01/2001"));
 
+		Inventory.produceReport(myInventory);
 	}
 
 }
