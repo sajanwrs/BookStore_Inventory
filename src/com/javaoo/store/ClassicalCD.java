@@ -11,6 +11,28 @@ import java.util.Date;
  */
 public class ClassicalCD extends Item {
 	/**
+	 * @param title
+	 * @param price
+	 * @param quantity
+	 * @param composer
+	 * @param performers
+	 * @param recordingLocation
+	 * @param releaseDate
+	 */
+	public ClassicalCD(String title, double price, int quantity, String composer, String[] performers,
+			String recordingLocation, Date releaseDate) {
+		super(title, price, quantity);
+		this.setComposer(composer);
+		this.setRecordingLocation(recordingLocation);
+		this.setReleaseDate(releaseDate);
+		for(int i=0; i<performers.length; i++) {
+			if(performers[i] != null)
+				addPerformer(performers[i]);
+		}
+		this.performers = performers;
+	}
+
+	/**
 	 * @return the composer
 	 */
 	public String getComposer() {
